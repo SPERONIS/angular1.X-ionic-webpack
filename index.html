@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>666</title>
+  <script>
+    function onDeviceReady() {
+      if (navigator.splashscreen)
+        setTimeout(function () {
+          navigator.splashscreen.hide();
+        });
+    }
+    document.addEventListener('deviceready', onDeviceReady, false);
+
+    function getSignImg(url) {
+      //        alert(url);
+      //通过controller来获取Angular应用
+      var appElement = document.querySelector('[ng-controller=AppCtrl]');
+      //获取$scope变量
+      var $scope = angular.element(appElement).scope();
+      //调用msg变量，并改变msg的值
+      $scope.tt = url;
+      //上一行改变了msg的值，如果想同步到Angular控制器中，则需要调用$apply()方法即可
+      $scope.$apply();
+      //调用控制器中的getData()方法
+      // console.log($scope.tt);
+    }
+  </script>
+</head>
+
+<body id="app" ng-app="app" ng-controller="AppCtrl">
+
+  <ion-nav-view></ion-nav-view>
+
+</body>
+
+</html>

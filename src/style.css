@@ -1,0 +1,505 @@
+html {
+    font-size: 100px;
+}
+@media screen and (min-width: 375px) {
+    html {
+        font-size: 117.1875px;
+    }
+}
+@media screen and (min-width: 414px) {
+    html {
+        font-size: 129.375px;
+    }
+}
+.parking-car {
+    width: 1.6rem;
+    margin: 0.5rem auto;
+    display: block;
+}
+.parkingpay_inputbox{
+    width: 2.88rem;
+    background-color: #fff;
+    background-position: bottom;
+    margin: 0.3rem auto 0;
+    border-radius: 5px;
+    position: relative;
+    padding: 0 0 0.1rem;
+    border: 2px solid #00a0e9;
+}
+.carcard h3 {
+    font-size: 0.14rem;
+    padding: 0.15rem 0.08rem 0.05rem;
+}
+.tabActive{
+    border-bottom:2px solid #1075BA;
+}
+.tabbox{
+    border-radius: 5px 5px 0 0;
+    top: 0;
+}
+.backbutton{
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    left: 0;top: 0;
+}
+.province{
+    list-style: none;
+    width: 20%;
+    float:left;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.parkingpaybutton{
+    display: block;
+    width: 70%;
+    margin: 0.4rem auto 0;
+    padding: 0.12rem 0;
+    box-shadow: none;
+    border: none;
+    border-top: 1px solid #ddd;
+    font-size: 16px;
+    background: #00a0e9;
+    color: #fff;
+    border-radius: 5px;
+}
+.selectprovince{
+    width: 35%;
+    float: left;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+}
+.wechatpay{
+    width: 80%;
+    display: block;
+    margin: 0.15rem auto 0;
+    background-color: #00a0e9!important;
+}
+/*.wechaticon{
+    background-image: url(../Image/icon_wechat@2x.png);
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    background-color:
+}*/
+.paysuccessbutton{
+    background-color: #169bd5;
+    color: #fff;
+    width: 100px;
+    font-size: 14px;
+    flex: 1;
+    margin: 0 20px;
+}
+.buttonlist{
+    position: absolute;bottom: 50px;
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+}
+.payfailedbackbutton{
+    width: 80px;
+    font-size: 14px;
+    border: 1px solid #85b8f8;
+    background-color: transparent;
+    margin-top: 10px;
+    color: #85b8f8;
+}
+#paydetail .label-info{
+    width: 65%;
+    text-align: right;
+    padding: 0 7px;
+    white-space: normal;
+    position: relative;
+}
+/* 欠费 */
+.arrearagelist .arrearageitem{
+    width: 90%;
+    border: 1px solid #f3f3f3;
+    margin: 10px auto;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0 0 3px #888888;
+    padding: 0 10px;
+}
+.arrearageitem .parkinglotName span{
+    padding-left: 5px;
+}
+.arrearageitem .parkinglotName {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size:18px!important;
+    margin:20px 0;
+    color: #7c5d52;
+}
+.arrearageitem .starttime{
+    float: left;
+}
+.arrearageitem .starttimestr{
+    float: right;
+}
+.clear{
+    zoom:1;
+}
+.clear:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.arrearageitem .starttimep,.arrearageitem .endtimep,.arrearageitem .feeAmountp{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px!important;
+    color: #a99087;
+    padding:5px 0;
+}
+.arrearageitem .endtimep{
+    border-bottom: 1px solid #e9e0dc;
+}
+.arrearageitem .starttimep{
+    border-top: 1px solid #e9e0dc;
+}
+.arrearageitem .arrearageAmount{
+    color: #856b63;
+    font-size: 22px;
+}
+.arrearageitem .arrearageAmountStr{
+    color: #d53e3e;
+    font-size: 22px;
+    float: right;
+}
+.province-delete{
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    font-size: 22px;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.province {
+    position: fixed;
+    bottom: 0;
+    width: 3.2rem;
+    height: 1.7rem;
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    padding: 0.01rem 0.05rem 0;
+    overflow: hidden;
+    flex-wrap: wrap;
+    border-radius: 2px;
+    box-shadow: 0 0 1px #898989;
+    justify-content: center;
+}
+.carNum {
+    position: fixed;
+    bottom: 0;
+    width: 3.2rem;
+    height: 1.7rem;
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    padding: 0.01rem 0.05rem 0;
+    overflow: hidden;
+    flex-wrap: wrap;
+    border-radius: 2px;
+    box-shadow: 0 0 1px #898989;
+}
+.province li {
+    box-sizing: border-box;
+    height: 0.35rem;
+    width: 0.29rem;
+    line-height: 0.35rem;
+    margin: 0.02rem 0.01rem;
+    border-radius: 0.03rem;
+    border: 1px solid #898989;
+    font-size: 0.14rem;
+    background: #fff;
+    float: left;
+}
+.carNum li {
+    box-sizing: border-box;
+    height: 0.35rem;
+    width: 0.26rem;
+    line-height: 0.35rem;
+    margin: 0.02rem 0.01rem;
+    border-radius: 0.03rem;
+    border: 1px solid #898989;
+    font-size: 0.14rem;
+    text-align: center;
+    background: #fff;
+    float: left;
+}
+li.carNum-num {
+    width: 0.29rem;
+}
+.overflow {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+}
+.carcard-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0.1rem 0.08rem;
+    width: 2.86rem;
+    overflow: hidden;
+}
+.search-car-num-list {
+    width: 70%;
+    position: absolute;
+    left: 15%;
+    top: 40px;
+    background: #fff;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    z-index: 9999;
+    border-radius: 5px;
+}
+.search-car-num-list ul{
+    list-style: none;
+    padding: 0 5px;
+    line-height: 190%;
+}
+.inputPro,
+.inputCarNumAdd,
+.inputCarNum {
+    height: 0.2775rem;
+    line-height: 0.2775rem;
+    width: 0.2775rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 0.03rem;
+    text-align: center;
+    font-size: 0.14rem;
+    float: left;
+}
+.historyReocrd {
+    margin-left: 0.1rem;
+    font-size: 0.10rem;
+}
+.historyReocrd span {
+    color: rgb(79, 174, 237);
+    margin-right: 5px;
+}
+.activeNum {
+    border: 1px solid #169bd5;
+}
+@keyframes flashing {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.background-gray{
+    background-color:gray!important;
+}
+.searchtabs {
+    padding-top: 0;
+    top: 0;
+}
+.tab-active {
+    color: #387ef5;
+    border-bottom: 2px solid #387ef5;
+}
+/*停车缴费详情*/
+.list {
+    width: 70%;
+    margin: 0.3rem 0 0.3rem 25%;
+}
+.list-item {
+    display: flex;
+    flex-direction: row;
+    margin: 0.1rem 0;
+    color: #5b5959;
+    font-size: 0.12rem;
+    flex-wrap: wrap;
+}
+.pay-amount {
+    text-align: center;
+    font-size: 0.3rem;
+    margin: 0.3rem 0;
+}
+.prompt {
+    color: #6d6d6d;
+    text-align: center;
+    margin-top: 0.1rem;
+}
+.service {
+    text-align: center;
+    color: #7b7b7b;
+    font-size: 0.12rem;
+    position: fixed;
+    bottom: 0.2rem;
+    left: 0.95rem;
+}
+/*停车优惠*/
+.parkingoffer_inputbox {
+    width: 80%;
+    background-color: #fff;
+    background-position: bottom;
+    margin: 0.5rem auto 0;
+    border-radius: 5px;
+    position: relative;
+    padding: 15px 0;
+}
+.offer-title {
+    text-align: center;
+    color: #00a0e9;
+}
+.promo-code {
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    height: 50px;
+}
+input.promo-code-input {
+    border-radius: 5px;
+    border: 2px solid #00a0e9;
+    width: 100%;
+    padding-left: 5px;
+    height: 0.5rem;
+}
+.sm {
+    position: absolute;
+    width: 0.4rem;
+    height: 0.4rem;
+    right: 0.05rem;
+    top: 0.05rem;
+}
+.parkingofferbutton {
+    display: block;
+    margin:0.5rem auto 0;
+    border-radius: 6px;
+    font-size: 16px;
+    width:70%;
+    color: #fff;
+    background: #00a0e9;
+}
+.parkingofferbutton:hover {
+    color: #00a0e9;
+    background: #fff;
+}
+span.cancel {
+    float: right;
+    display: inline-block;
+    width: 0.18rem;
+    text-align: center;
+    font-size: 0.2rem;
+    color: #aaa;
+    line-height: 0.25rem;
+}
+.money {
+    text-align: center;
+    color: #b3b3b3;
+}
+.payinfo_fee {
+    font-size: 30px;
+}
+.pay_info {
+    text-align: center;
+    margin-bottom: 0.1rem;
+}
+.receivable_money {
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+}
+.keyword {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.preTime {
+    margin-left: 0.1rem;
+}
+h3.parkingpay_title {
+    color: #fff;
+    padding-top: 50px;
+    text-align: center;
+}
+.business_logo {
+    width: 75px;
+    height: 75px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-37.5px);
+}
+.business_logo img{
+    width: 100%;
+    height: 100%;
+}
+/*identifier*/
+.parking-car2 {
+    width: 1.6rem;
+    margin: 1.3rem auto 0;
+    display: block;
+}
+.identifier-title {
+    text-align: center;
+    font-size: 0.16rem;
+    margin-bottom: 0.5rem;
+    color: #898989;
+}
+.identifier {
+    color: #8c8c8d;
+    text-align: center;
+}
+.identifier-num {
+    text-align: center;
+    color: #898989;
+    font-size: 0.26rem;
+    margin-top: 0.2rem;
+}
+.service {
+    text-align: center;
+    color: #7b7b7b;
+    font-size: 0.12rem;
+    position: fixed;
+    bottom: 0.2rem;
+    left: 0.95rem;
+}
+/*出场*/
+.success {
+    color: #00abeb;
+    font-size: 0.26rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.success img {
+    width: 0.3rem;
+    height: 0.3rem;
+}
+.return {
+    width: 60%;
+    background: #00a0e9;
+    color: #fff;
+    font-size: 0.2rem;
+    letter-spacing: 5px;
+}
+.button.activated,
+.button.active {
+    background: #028ece;
+    color: #fff;
+}
+.desc {
+    color: #656464;
+}

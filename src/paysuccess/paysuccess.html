@@ -1,0 +1,6 @@
+<ion-content style="text-align: center;padding-top: 120px;background-color: #f3f3f3;">
+	<h2 class="success"><img src="./image/ok.png">恭喜您，支付成功！</h2>
+	<p class="desc" ng-if="showTip">请在{{freeTime}}分钟之内驶出场区,超时未驶出需补缴费用</p>
+	<div class="return button" ng-click="back()">完成</div>
+</ion-content>
+<p class="service" ng-if="telephoneNum">客服电话：<a href="tel:{{telephoneNum}}">{{telephoneNum}}</a></p>
