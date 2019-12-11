@@ -6,15 +6,9 @@ module.exports = angular.module('app.services', [])
     request.$inject=['$http', '$ionicPopup','$ionicLoading'];
 
     function request($http,  $ionicPopup, $ionicLoading) {
-        var
-            code ,  //微信返回的code,
-            qrId,
-            plateformCode,
-            isBackToPayDetail = false,
-            popStateCount = 0,
-        var userAgent = getUserAgent();
-        var mstate = GetQueryString("state") || '';
-        
+        var popStateCount = 0,
+            userAgent = getUserAgent();
+       
         /**
         * 获取参数
         * */
@@ -181,9 +175,6 @@ module.exports = angular.module('app.services', [])
         }
 
         return {
-            code: code,
-            qrId: qrId,
-            plateformCode: plateformCode,
             ajax: ajax,
             setItem: setItem,
             getItem: getItem,
@@ -192,7 +183,6 @@ module.exports = angular.module('app.services', [])
             setSessionItem: setSessionItem,
             getSessionItem: getSessionItem,
             GetQueryString: GetQueryString,
-            isBackToPayDetail: isBackToPayDetail,
             userAgent : userAgent,
             popStateCount : popStateCount,
             closeWindow : closeWindow,

@@ -13,16 +13,28 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
     //#region 
     
     $stateProvider
+        // .state('parkingpay', {
+        //     url: '/parkingpay',
+        //     template: require('./parkingpay/parkingpay.html'),
+        //     controller: 'parkingpayCtrl',
+        //     resolve: {
+        //         loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+        //             return require('./parkingpay/parkingpay.js');
+        //         }]
+        //     },
+        //     cache: false
+        // })
         .state('paysuccess', {
-            url: '/paysuccess/:telephoneNum/:freeTime',
-            template: 'paysuccess/paysuccess.html',
+            url: '/paysuccess/:telephoneNum',
+            template: require('./paysuccess/paysuccess.html'),
+            controller: 'paysuccessCtrl',
             resolve: {
                 loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
                     return require("./paysuccess/paysuccess.js?v=201906081992");
                 }]
-            },
-            controller: 'paysuccessCtrl'
+            }
         })
+        
         
     //#endregion
     $urlRouterProvider.otherwise('/paysuccess/-1/');

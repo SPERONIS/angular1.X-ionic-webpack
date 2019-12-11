@@ -9,7 +9,7 @@ var root = path.resolve(__dirname, '../');
 var server = {
     contentBase:'/dist/',
     host: 'localhost',//服务主机
-    port: 8089,//端口
+    port: 8080,//端口
     inline: true, // 可以监控js变化
     hot: true, // 热启动
     compress: true,
