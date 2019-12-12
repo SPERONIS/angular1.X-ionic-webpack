@@ -17,4 +17,4 @@ require('./js/services');
 const app = angular.module("app", ['ionic','oc.lazyLoad','app.services','ui.router']);
 
 ```
-项目规模不大，仅作为参考。
+
