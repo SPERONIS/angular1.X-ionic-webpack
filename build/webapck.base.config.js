@@ -5,7 +5,7 @@ module.exports = {
     entry: {
         main: root + '\\src\\main.js',
         jquery:['jquery'],
-        ionic: root + '\\src\\ionic\\js\\ionic.bundle.min.js'
+        ionic: root + '\\src\\ionic\\js\\ionic.bundle.js'
     },
     // optimization: {
     //     minimize: true,
@@ -34,15 +34,23 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(png|jpe?g|gif|woff|svg|eot|ttf)(\?.*)?$/,
+                test: /\.(pe?g|gif|woff|svg|eot|ttf)(\?.*)?$/,
                 loader: 'url-loader',
                 query: {
-                    limit: 10000,
+                    limit: 8192,
                 }
             },
             {
                 test: /\.html$/,
                 loader: 'html-loader'
+            },
+            {
+                test: /\.css$/,
+                loader: ['style-loader','css-loader'],
+            },
+            {
+                test: /\.png$/,
+                loader: ['file-loader'],
             }
         ]
     },

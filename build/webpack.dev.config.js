@@ -52,12 +52,7 @@ var plugins = [
     }),
     new webpack.HotModuleReplacementPlugin()
 ];
-baseconf.module.rules.push(
-    {
-        test: /\.css$/,
-        loader: ['style-loader','css-loader'],
-    }
-);
+
 module.exports = merge(baseconf, {
     output: {
         path: root+"/dist",

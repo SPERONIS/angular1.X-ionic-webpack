@@ -1,8 +1,8 @@
 require('./ionic/css/ionic.css');
 require('./style.css');
-require('./js/base64');
+// require('./js/base64');
 const angular = require('angular');
-require('./ionic/js/ionic.bundle.min');
+require('./ionic/js/ionic.bundle');
 require('./js/oclazyload.min');
 require('angular-ui-router');
 require('./js/services');
@@ -13,31 +13,20 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
     //#region 
     
     $stateProvider
-        // .state('parkingpay', {
-        //     url: '/parkingpay',
-        //     template: require('./parkingpay/parkingpay.html'),
-        //     controller: 'parkingpayCtrl',
-        //     resolve: {
-        //         loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-        //             return require('./parkingpay/parkingpay.js');
-        //         }]
-        //     },
-        //     cache: false
-        // })
-        .state('paysuccess', {
-            url: '/paysuccess/:telephoneNum',
-            template: require('./paysuccess/paysuccess.html'),
-            controller: 'paysuccessCtrl',
+        .state('success', {
+            url: '/success',
+            template: require('./success/success.html'),
+            controller: 'successCtrl',
             resolve: {
                 loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-                    return require("./paysuccess/paysuccess.js?v=201906081992");
+                    return require("./success/success.js?v=201906081992");
                 }]
             }
         })
         
         
     //#endregion
-    $urlRouterProvider.otherwise('/paysuccess/-1/');
+    $urlRouterProvider.otherwise('/success');
 }])
     .controller("AppCtrl", require('./js/controllers'))
     .directive('errSrc', function () {
